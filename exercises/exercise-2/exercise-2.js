@@ -70,3 +70,31 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+//display the names of the people who belong to the Gryffindor house.
+function filterWizards (wizards) {
+  wizards.forEach((wizard) => {
+    const { firstName, lastName, house } = wizard;
+    if (house == "Gryffindor") {
+      console.log(`${firstName} ${lastName}`);
+    }
+  });
+}
+
+console.log("Exercise1 solution:");
+filterWizards(hogwarts);
+
+
+
+//display the names of teachers who have pets.
+function filterTeachersPet(wizards) {
+  wizards.forEach((wizard) => {
+    const { firstName, lastName, pet, occupation } = wizard;
+    if (occupation == "Teacher" && pet != null) {
+      console.log(`${firstName} ${lastName}`);
+    }
+  });
+}
+
+console.log("Exercise2 solution:")
+filterTeachersPet(hogwarts);
